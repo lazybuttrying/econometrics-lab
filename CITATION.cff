@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Econometrics Lab"
+message: "If you use this repository, please cite it as below."
+version: "0.1.0"
+authors:
+  - family-names: "Maintainer"
+    given-names: "Project"
+repository-code: "https://github.com/OWNER/REPO"
+url: "https://github.com/OWNER/REPO"
+license: "MIT"

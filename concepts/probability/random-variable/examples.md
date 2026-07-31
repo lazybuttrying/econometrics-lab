@@ -1,0 +1,2 @@
+- Bernoulli: X in {0,1} with P(X=1)=p
+- Dice roll: X in {1,...,6}

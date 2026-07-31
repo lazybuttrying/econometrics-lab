@@ -1,0 +1,3 @@
+- Well-defined sample space
+- Probability measure defined
+- Mapping measurable

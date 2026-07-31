@@ -1,0 +1,33 @@
+name: Experiment task
+description: Add or improve a reproducible experiment
+labels: [experiment]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context/problem
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ] config.R
+        - [ ] run.R
+        - [ ] analysis.R / analysis.qmd
+        - [ ] notes.md
+        - [ ] outputs path defined
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility confirmation
+      description: Include seed, relative paths, and rerun instructions.
