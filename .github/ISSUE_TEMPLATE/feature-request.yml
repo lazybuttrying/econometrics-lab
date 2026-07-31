@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a new reusable feature
+labels: [help wanted]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context/problem
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Proposed implementation tasks.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility confirmation
+      description: Describe how users can verify the feature behavior.

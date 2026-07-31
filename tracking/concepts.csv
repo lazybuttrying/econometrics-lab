@@ -1,0 +1,5 @@
+concept,topic,status,has_notes,has_experiment,has_src_function,has_test,has_reflection,linked_in_graph
+random-variable,probability,active,yes,yes,yes,yes,no,yes
+expectation,probability,planned,no,no,no,no,no,no
+variance,probability,planned,no,no,no,no,no,no
+covariance,probability,planned,no,no,no,no,no,no

@@ -1,0 +1,31 @@
+---
+title: "Analysis Template"
+format: html
+params:
+  experiment_path: "experiments/probability/central-limit-theorem"
+  seed: 123
+---
+
+## Goal
+
+## Inputs
+```{r}
+set.seed(params$seed)
+path <- file.path(params$experiment_path, "outputs", "results.csv")
+if (file.exists(path)) read.csv(path)
+```
+
+## Method
+
+## Results
+```{r}
+library(ggplot2)
+placeholder <- data.frame(x = 1:10, y = (1:10)^0.5)
+ggplot(placeholder, aes(x, y)) + geom_line()
+```
+
+## Interpretation
+
+## Reproducibility Notes
+
+## Next Steps

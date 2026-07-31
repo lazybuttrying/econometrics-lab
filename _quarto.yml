@@ -1,0 +1,12 @@
+project:
+  output-dir: outputs/reports
+
+execute:
+  echo: true
+  warning: false
+  message: false
+
+format:
+  html:
+    toc: true
+    number-sections: true

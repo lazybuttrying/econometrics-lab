@@ -1,0 +1,39 @@
+---
+title: "Central Limit Theorem"
+format: html
+params:
+  experiment_path: "experiments/probability/central-limit-theorem"
+  seed: 123
+---
+
+## Goal
+Demonstrate convergence of sample-mean distributions.
+
+## Inputs
+```{r}
+set.seed(params$seed)
+path <- file.path(params$experiment_path, "outputs", "clt-sample-means.csv")
+dat <- read.csv(path)
+head(dat)
+```
+
+## Method
+Repeated sampling from an exponential source distribution.
+
+## Results
+```{r}
+library(ggplot2)
+ggplot(dat, aes(x = sample_mean)) +
+  geom_histogram(bins = 30) +
+  facet_wrap(~ n, scales = "free_y") +
+  labs(title = "Sampling Distribution of Means")
+```
+
+## Interpretation
+Higher sample sizes produce narrower and more symmetric mean distributions.
+
+## Reproducibility Notes
+Run `run.R` first, keep seed fixed, and use relative paths.
+
+## Next Steps
+Compare with normal and Bernoulli source distributions.

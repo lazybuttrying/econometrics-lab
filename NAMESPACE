@@ -1,0 +1,5 @@
+# Generated manually for initial scaffold
+export(expectation_empirical)
+export(variance_empirical)
+export(sample_with_replacement)
+export(rbern)

@@ -1,0 +1,19 @@
+Package: econometricslab
+Type: Package
+Title: Econometrics Lab Utilities
+Version: 0.0.1
+Authors@R: person("Project", "Maintainer", email = "maintainer@example.com", role = c("aut", "cre"))
+Description: Reusable helpers for econometrics simulations and experiments.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    stats,
+    ggplot2,
+    dplyr
+Suggests:
+    testthat (>= 3.0.0),
+    lintr,
+    styler,
+    covr
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2

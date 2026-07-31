@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
+      - name: Install R dependencies
+        run: |
+          Rscript -e "install.packages(c('testthat','lintr','styler','ggplot2','dplyr'), repos='https://cloud.r-project.org')"
+      - name: Lint
+        run: Rscript -e "lintr::lint_dir('.')"
+      - name: Tests
+        run: Rscript -e "testthat::test_dir('tests/testthat')"
+      - name: Concept gate
+        run: Rscript scripts/check-concept-gate.R
+      - name: Optional R CMD check
+        run: R CMD check --no-manual .
+        continue-on-error: true

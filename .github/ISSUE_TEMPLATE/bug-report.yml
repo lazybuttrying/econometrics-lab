@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducibility or behavior bug
+labels: [tests]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context/problem
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ] Steps to reproduce
+        - [ ] Expected result
+        - [ ] Actual result
+        - [ ] Environment details
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: What verifies the bug is fixed?
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility confirmation
+      description: Include command/output snippets if possible.
